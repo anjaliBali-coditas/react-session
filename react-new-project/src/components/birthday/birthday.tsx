@@ -89,9 +89,7 @@ Birthday.Mrudula = () => {
     return (
         <div>
             <h3>Mrudula</h3>
-
             <p>{state.mrudula}</p>
-
             <button
                 onClick={() =>
                     dispatch({
@@ -102,7 +100,6 @@ Birthday.Mrudula = () => {
             >
                 Uninvited
             </button>
-
             <button
                 onClick={() =>
                     dispatch({
