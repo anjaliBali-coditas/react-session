@@ -1,9 +1,4 @@
-import {
-    createContext,
-    use,
-    useReducer,
-    type PropsWithChildren
-} from "react";
+import { createContext, use, useReducer,type PropsWithChildren} from "react";
 
 type Status = "invited" | "uninvited" | "maybe";
 
@@ -15,16 +10,13 @@ interface BirthdayData {
     ani: Status;
 }
 
-type Action =
-    | {
+type Action = {
           type: "MRUDULA_STATUS";
           status: Status;
-      }
-    | {
+      } | {
           type: "ANJALI_STATUS";
           status: Status;
-      }
-    | {
+      } | {
           type: "ANI_STATUS";
           status: Status;
       };
@@ -82,10 +74,7 @@ const useBirthdayContext = () => {
 };
 
 const Birthday = ({ children }: BirthdayProps) => {
-    const [state, dispatch] = useReducer(
-        reducer,
-        initialState
-    );
+    const [state, dispatch] = useReducer(reducer,initialState);
 
     return (
         <BirthdayContext value={{ state, dispatch }}>
